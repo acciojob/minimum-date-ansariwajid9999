@@ -1,5 +1,15 @@
 function minDate(dates) {
-  //write you code here
+  let min = 31;
+	let ans = "";
+	for (let date of dates) {
+		const num = date.split("/");
+		let day = Number(num[2]);  // Correctly extract and convert the day
+		if (day < min) {
+			min = day;
+			ans = date;
+		}
+	}
+	return ans;  
 }
 
 // Do not change the code
